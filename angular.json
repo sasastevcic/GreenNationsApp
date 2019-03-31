@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "fw",
       "schematics": {},
       "architect": {
         "build": {
@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/glyphicons/glyphicons/css/bootstrap-glyphicons.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
