@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li *ngFor="let item of ms.items">
+      <fw-menu-item [item]="item"
+                    [ngClass]="{'vertical-menu': ms.isVertical}">        
+      </fw-menu-item>
+    </li>
+  </ul>
+</nav>

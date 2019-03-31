@@ -8,6 +8,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ScreenBelowLarge } from './directives/screen-below-large.directive';
 import { ScreenLarge } from './directives/screen-large.directive';
+import { MenuComponent } from './menus/menu/menu.component';
+import { MenuItemComponent } from './menus/menu-item/menu-item.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { ScreenLarge } from './directives/screen-large.directive';
     TopBarComponent,
     StatusBarComponent,
     ScreenBelowLarge,
-    ScreenLarge
+    ScreenLarge,
+    MenuComponent,
+    MenuItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FrameworkBodyComponent
