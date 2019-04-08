@@ -2,8 +2,18 @@
   <ul>
     <li *ngFor="let item of ms.items">
       <fw-menu-item [item]="item"
-                    [ngClass]="{'vertical-menu': ms.isVertical}">        
+                    [ngClass]="{'vertical-menu': ms.isVertical}"
+                    [parentIsPopup]="false">        
       </fw-menu-item>
     </li>
   </ul>
 </nav>
+
+<button 
+      *ngIf="!ms.showingLeftSideMenu"
+      class="btn btn-sm"
+      [ngClass]="{'horizontal': !ms.isVertical }"
+      (click)="ms.toggleMenuOrientation()">
+  <span *ngIf="ms.isVertical" class="glyphicon glyphicon-menu-up"></span>
+  <span *ngIf="!ms.isVertical" class="glyphicon glyphicon-menu-left"></span>
+</button>

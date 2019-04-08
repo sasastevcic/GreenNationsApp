@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FrameworkConfigService } from '../services/framework-config.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'fw-top-bar',
@@ -9,10 +10,15 @@ import { FrameworkConfigService } from '../services/framework-config.service';
 export class TopBarComponent implements OnInit {
 
   constructor(
-    private frameworkConfigService: FrameworkConfigService
+    private frameworkConfigService: FrameworkConfigService,
+    private userService: UserService
   ) { }
 
   ngOnInit() {
+  }
+
+  signOut() {
+    this.userService.signOut();
   }
 
 }
